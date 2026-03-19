@@ -8,7 +8,7 @@ import OrderSummary from "../pages/OrderSummary";
 
 export const myrouter = createBrowserRouter([
     {path: '/', element:<App/>, children:[
-        {index:true, element:<Home/>},
+        {index:true, element:<Shop/>},
         {path:'shop', element:<Shop/>},
         {path:'cart', element:<Cart/>},
         {path:'add', element:<AddProduct/>},
