@@ -1,16 +1,156 @@
-# React + Vite
+# 🛒 Shopping Cart App (React + Redux Toolkit + Tailwind)
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A modern Shopping Cart application built using **React**, **Redux Toolkit (RTK)**, and **Tailwind CSS**.
+This project includes product listing, cart management, and checkout flow with payment integration (SSLCommerz).
 
-Currently, two official plugins are available:
+---
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+Visit: https://shoping-cart-plum-pi.vercel.app/
 
-## React Compiler
+## 🚀 Features
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+* 🛍️ View products (from API / json-server)
+* ➕ Add to cart
+* ➖ Increase / decrease quantity
+* 🗑️ Remove item from cart
+* 🧮 Auto total price calculation
+* 💾 Cart persistence (localStorage)
+* 🧾 Order summary page
+* 💳 Payment options:
 
-## Expanding the ESLint configuration
+  * Cash on Delivery
+  * PayPal (UI)
+  * SSLCommerz (integration ready)
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+---
+
+## 🧠 Tech Stack
+
+* **React** – UI
+* **Redux Toolkit** – State management
+* **React Router** – Routing
+* **Tailwind CSS** – Styling
+* **json-server** – Fake backend API
+* **SSLCommerz** – Payment gateway (sandbox)
+
+---
+
+## 📂 Project Structure
+
+```id="ps1"
+src/
+│
+├── components/
+│   ├── ProductCard.jsx
+│   ├── CartItem.jsx
+│
+├── pages/
+│   ├── Shop.jsx
+│   ├── Cart.jsx
+│   ├── AddProduct.jsx
+│   ├── OrderSummary.jsx
+│
+├── features/
+│   └── cart/
+│       └── cartSlice.js
+│
+├── redux/
+│   └── store.js
+│
+├── routers/
+│   └── router.jsx
+│
+├── App.jsx
+└── main.jsx
+```
+
+---
+
+## ⚙️ Installation
+
+```bash id="ps2"
+git clone https://github.com/your-username/shopping-cart-app.git
+cd shopping-cart-app
+npm install
+npm run dev
+```
+
+---
+
+## 🗄️ Run json-server
+
+```bash id="ps3"
+npx json-server --watch db.json --port 3000
+```
+
+---
+
+## 🔁 Redux Flow
+
+```id="ps4"
+Component → dispatch(action) → slice → state update → UI re-render
+```
+
+---
+
+## 🛒 Cart Logic
+
+* If product exists → increase quantity
+* If not → add new item with `quantity = 1`
+
+---
+
+## 💾 Persistence
+
+Cart data is stored in:
+
+```id="ps5"
+localStorage
+```
+
+👉 So cart remains after page refresh
+
+---
+
+## 💳 Payment Flow (SSLCommerz)
+
+```id="ps6"
+Cart → Order Summary → Backend → SSLCommerz → Success Page
+```
+
+---
+
+## 📌 Example State
+
+```js id="ps7"
+[
+  {
+    id: 1,
+    name: "Laptop",
+    price: 999.99,
+    quantity: 2
+  }
+]
+```
+
+---
+
+## ✨ Future Improvements
+
+* 🔐 User authentication (login/register)
+* 🌐 Backend database (MongoDB / MySQL)
+* 📦 Order history
+* 📱 Responsive mobile UI
+* 🔔 Payment verification
+
+---
+
+## 🙌 Author
+
+**Hasib**
+
+---
+
+## ⭐ Support
+
+If you like this project, give it a ⭐ on GitHub!
