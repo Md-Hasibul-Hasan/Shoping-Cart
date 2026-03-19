@@ -20,7 +20,7 @@ Visit: https://shoping-cart-plum-pi.vercel.app/
 
   * Cash on Delivery
   * PayPal (UI)
-  * SSLCommerz (integration ready)
+  * SSLCommerz (UI)
 
 ---
 
@@ -31,7 +31,6 @@ Visit: https://shoping-cart-plum-pi.vercel.app/
 * **React Router** – Routing
 * **Tailwind CSS** – Styling
 * **json-server** – Fake backend API
-* **SSLCommerz** – Payment gateway (sandbox)
 
 ---
 
@@ -69,7 +68,7 @@ src/
 ## ⚙️ Installation
 
 ```bash id="ps2"
-git clone https://github.com/your-username/shopping-cart-app.git
+git clone https://github.com/Md-Hasibul-Hasan/shopping-cart-app.git
 cd shopping-cart-app
 npm install
 npm run dev
@@ -100,25 +99,6 @@ Component → dispatch(action) → slice → state update → UI re-render
 
 ---
 
-## 💾 Persistence
-
-Cart data is stored in:
-
-```id="ps5"
-localStorage
-```
-
-👉 So cart remains after page refresh
-
----
-
-## 💳 Payment Flow (SSLCommerz)
-
-```id="ps6"
-Cart → Order Summary → Backend → SSLCommerz → Success Page
-```
-
----
 
 ## 📌 Example State
 
